@@ -101,6 +101,15 @@ export default function TravelForm() {
     }
   };
 
+  const cleanMarkdownForSharing = (markdown) => {
+    return markdown
+      .replace(/^## (.+)$/gm, "🔹 $1")       // subtítulos
+      .replace(/\*\*(.+?)\*\*/g, "$1")      // negrito
+      .replace(/^\* (.+)$/gm, "• $1")       // bullets
+      .replace(/[`#>]/g, "")                // tokens soltos
+      .replace(/\n{2,}/g, "\n\n");          // múltiplas quebras de linha
+  };
+
   const handleShare = async () => {
     if (!navigator.share) {
       alert("Compartilhamento não suportado neste dispositivo.");
@@ -108,9 +117,11 @@ export default function TravelForm() {
     }
 
     try {
+      const formattedText = cleanMarkdownForSharing(result);
+
       await navigator.share({
         title: "Roteiro gerado no Planeta Gemini",
-        text: result,
+        text: formattedText,
       });
     } catch (error) {
       console.error("Erro ao compartilhar:", error);
@@ -165,8 +176,15 @@ export default function TravelForm() {
         <img
           src="/logo-imersao.png"
           alt="Logotipo do projeto Planeta Gemini com selo da Imersão IA"
-          className="h-24 md:h-32"
+          className="h-20 md:h-28"
         />
+      </div>
+
+      <div className="text-center mb-4">
+        <h1 className="text-xl font-semibold text-indigo-700">
+          Roteiro Inteligente de Viagem
+        </h1>
+        <p className="text-sm text-gray-600">Personalize sua viagem com a ajuda do Gemini</p>
       </div>
 
       {loading && (
