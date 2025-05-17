@@ -176,15 +176,15 @@ export default function TravelForm() {
         <img
           src="/logo-imersao.png"
           alt="Logotipo do projeto Planeta Gemini com selo da Imersão IA"
-          className="h-20 md:h-28"
+          className="h-20 md:h-24"
         />
       </div>
 
       <div className="text-center mb-4">
-        <h1 className="text-xl font-semibold text-indigo-700">
-          Roteiro Inteligente de Viagem
+        <h1 className="text-lg font-semibold text-indigo-700">
+          Seu roteiro de viagem, com ou sem destino
         </h1>
-        <p className="text-sm text-gray-600">Personalize sua viagem com a ajuda do Gemini</p>
+        <p className="text-sm text-gray-600">Personalize sua jornada com a inteligência do Gemini</p>
       </div>
 
       {loading && (
