@@ -1,6 +1,6 @@
 # 🌍 Planeta Gemini - Seu roteiro de viagem, com ou sem destino
 
-**Planeta Gemini** é um aplicativo web interativo desenvolvido durante a [Imersão IA da Alura]([https://www.alura.com.br/imersaoia](https://cursos.alura.com.br/imersao/imersao-ia-google-gemini-ii)). Ele permite que usuários criem **roteiros personalizados de viagem** com base em seus interesses e preferências, humor e orçamento — tudo isso gerado automaticamente com a **API do Google Gemini**.
+**Planeta Gemini** é um aplicativo web interativo desenvolvido durante a [Imersão IA da Alura](https://cursos.alura.com.br/imersao/imersao-ia-google-gemini-ii). Ele permite que usuários criem **roteiros personalizados de viagem** com base em seus interesses e preferências, humor e orçamento — tudo isso gerado automaticamente com a **API do Google Gemini**.
 Mas o mais incrível? **Se você deixar tudo em branco, o app escolhe um lugar por você** — deixando o Google Gemini te surpreender com um destino inesperado.
 
 ## ✅ Destaques do Projeto
